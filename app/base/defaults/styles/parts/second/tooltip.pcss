@@ -1,0 +1,18 @@
+@import "../../../../../src/styles/variables-and-mixins.pcss";
+
+.tooltip {
+	position: fixed;
+	white-space: nowrap;
+	padding: 10px;
+	font-size: 14px;
+	line-height: 14px;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.9);
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+	color: #fff;
+	z-index: 1;
+
+	&_header {
+		z-index: 10;
+	}
+}

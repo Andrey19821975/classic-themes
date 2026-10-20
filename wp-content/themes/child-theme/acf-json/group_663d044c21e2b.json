@@ -1,0 +1,43 @@
+{
+    "key": "group_663d044c21e2b",
+    "title": "TAX: Property Status",
+    "fields": [
+        {
+            "key": "field_663d044c2a9df",
+            "label": "Marker Color",
+            "name": "marker_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Select the color of the marker to the left of the status on the property pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "property_status"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1715274956
+}

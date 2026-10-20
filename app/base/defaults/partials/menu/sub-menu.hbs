@@ -1,0 +1,28 @@
+{{#if expend}}
+	<button aria-expanded="false"
+			class="
+				{{class}}__expend-button
+				{{class}}__expend-button_level_{{level}}
+				{{#if subMenu}}{{class}}__expend-button_level_sub{{else}}{{class}}__expend-button_level_top{{/if}}
+		">
+		{{svgInline "menu-marker.svg"}}
+		<span class="screen-reader-text">Submenu for "{{title}}"</span>
+	</button>
+{{/if}}
+<div class="
+	{{class}}__sub-menu
+	{{class}}__sub-menu_level_{{level}}
+	{{#if subMenu}}{{class}}__sub-menu_level_sub{{else}}{{class}}__sub-menu_level_top{{/if}}
+"{{#if expend}} hidden{{/if}}>
+	<ul class="
+		{{class}}__sub-items
+		{{class}}__sub-items_level_{{level}}
+		{{#if subMenu}}{{class}}__sub-items_level_sub{{else}}{{class}}__sub-items_level_top{{/if}}
+	">
+		{{#if @partial-block}}
+			{{#>set-context level=(increment level) subMenu=true}}
+				{{>@partial-block}}
+			{{/set-context}}
+		{{/if}}
+	</ul>
+</div>

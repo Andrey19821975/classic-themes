@@ -1,0 +1,17 @@
+{
+  "require-dev": {
+    "kint-php/kint": "^5.1.0",
+    "roave/security-advisories": "dev-master"
+  },
+  "config": {
+    "vendor-dir": "includes/vendor",
+    "platform": {
+      "php": "8.2"
+    }
+  },
+  "autoload": {
+    "files": [
+		"includes/functions.php"
+    ]
+  }
+}

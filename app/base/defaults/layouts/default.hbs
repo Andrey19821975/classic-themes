@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{pageTitle}}</title>
+	<script src="{{root}}assets/fonts/fonts-all.js" type="module" async></script>
+	<link rel="stylesheet" href="{{root}}assets/css/main.css">
+	{{#if (isWoocommerce)}}
+		<link rel="stylesheet" href="{{root}}assets/css/woocommerce-main.css">
+	{{/if}}
+	<link rel="stylesheet" href="{{root}}assets/css/second.css">
+	<link rel="stylesheet" href="{{root}}assets/css/footer.css">
+</head>
+<body class="{{#ifpage 'home'}}home-page {{/ifpage}}{{bodyClass}}">
+
+<a class="screen-reader-text" href="#page-main">Skip to content</a>
+
+{{>header-wrapper}}
+
+<main id="page-main">
+	{{>body}}
+</main>
+
+{{>footer}}
+
+{{>mobile-menu-wrapper}}
+
+<script id='theme-init-js-extra'>
+	window.theme = {
+		"url": "file:" === location.protocol ? '{{root}}' : location.pathname.startsWith("/www/") ? "/www/" : "/",
+		"ajaxUrl": "\/wp-admin\/admin-ajax.php",
+		"ajaxNonce": "d0b7158aec",
+		"googleMapsApiKey": "AIzaSyBmi92_6W9swD_TXNurhGAGdMWT6PAW2zM",
+		"propertyTypes": [
+			{
+				"name": "Self Storage",
+				"strokeColor": "#5c8798",
+				"fillColor": "#68a2b9"
+			},
+			{
+				"name": "Manufactured Housing",
+				"strokeColor": "#c0ad79",
+				"fillColor": "#f2d383"
+			},
+			{
+				"name": "Multifamily",
+				"strokeColor": "#447c56",
+				"fillColor": "#4a9462"
+			}
+		]
+	};
+
+	window.addEventListener('load', () => {
+		document.dispatchEvent( new CustomEvent ('gform_main_scripts_loaded'))
+	})
+</script>
+<script src="{{root}}assets/js/main.js" defer></script>
+{{#if (isJQuery)}}
+	<script src="{{root}}assets/js/jquery.js"></script>
+{{/if}}
+{{#if (isWoocommerce)}}
+	{{>menu-cart count=3}}
+	<script src="{{root}}assets/js/woocommerce.js" defer></script>
+{{/if}}
+{{#if (isCookiesBanner)}}
+	{{>cookies-banner}}
+{{/if}}
+</body>
+</html>

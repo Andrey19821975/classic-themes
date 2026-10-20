@@ -1,0 +1,69 @@
+---
+pageTitle: Available Properties
+---
+
+<link rel="stylesheet" href="{{root}}assets/css/real-properties.css">
+<link rel="stylesheet" href="{{root}}assets/css/locations.css">
+<link rel="stylesheet" href="{{root}}assets/css/real-estate.css">
+
+<section class="real-properties real-properties_available real-properties_hide_filter_type">
+	<div class="inner">
+		<h1 class="screen-reader-text">Available Properties</h1>
+		<div class="real-properties__actions">
+			<button class="real-properties__clear-btn" type="button">Clear</button>
+			<div class="real-properties__mode">
+				<button class="real-properties__mode-button active" data-mode="list">{{svgInline 'list-icon.svg'}} List</button>
+				<button class="real-properties__mode-button" data-mode="map">{{svgInline 'location-icon.svg'}} Map</button>
+			</div>
+			<div class="real-properties__filters-selected"></div>
+			<div class="real-properties__filters">
+				<details class="real-properties__filters-details" data-filter-by="type">
+					<summary class="real-properties__filters-summary"><span>Filter by Type</span> {{svgInline 'menu-marker.svg'}}</summary>
+					<ul class="real-properties__filters-list"></ul>
+				</details>
+				<details class="real-properties__filters-details" data-filter-by="state">
+					<summary class="real-properties__filters-summary"><span>Filter by State</span> {{svgInline 'menu-marker.svg'}}</summary>
+					<ul class="real-properties__filters-list"></ul>
+				</details>
+			</div>
+		</div>
+		<div class="real-properties__wrapper">
+			<div class="real-estate-objects">
+				{{>real-estate latitude="38.180748" longitude="-100.495314" image="real-estate-1.jpg" status="Available" statusColor="green" title="Cullen RV Park" price="$8,500,000" area="15.1 Acres" units="97 Lots" location="Pearland, TX" type="Manufactured Housing" state="Texas" available="true"}}
+				{{>real-estate latitude="39.863266" longitude="-100.931267" image="real-estate-2.jpg" status="Available" statusColor="green" title="Crossed Palms RV Resort" price="$8,000,000" area="15.8 Acres" units="100 Units" location="Nevada, TX" type="Manufactured Housing" state="Texas" available="true"}}
+				{{>real-estate latitude="39.520675" longitude="-101.49161" image="real-estate-3.jpg" status="Available" statusColor="green" title="Texas Toy Storage" price="$6,100,000" area="5.9 Acres" units="136 Units" location="Santa Fe, TX" type="Self Storage" state="Louisiana" available="true"}}
+				{{>real-estate latitude="39.170964" longitude="-100.332246" status="Available" statusColor="green" price="$6,700,000" area="5.9 Acres" units="136 Units" location="Santa Fe, TX" type="Self Storage" state="Oklahoma" available="true"}}
+				{{>real-estate latitude="40.680478" longitude="-100.162763" image="real-estate-2.jpg" status="Under LOI" statusColor="yellow" price="$8,500,000" location="Pearland, TX" type="Self Storage" state="Louisiana" available="true"}}
+				{{>real-estate latitude="40.332181" longitude="-101.950692" image="real-estate-3.jpg" status="Available" statusColor="green" price="$8,500,000" location="Pearland, TX" type="Self Storage" state="Arkansas" available="true"}}
+				{{>real-estate latitude="40.506801" longitude="-100.159555" status="Available" statusColor="green" price="$8,500,000" location="Pearland, TX" type="Self Storage" state="New Mexico" available="true"}}
+				{{>real-estate latitude="40.765053" longitude="-101.855221" image="real-estate-2.jpg" status="Available" statusColor="green" price="$8,500,000" location="Pearland, TX" type="Self Storage" state="Arkansas" available="true"}}
+				{{>real-estate latitude="39.322684" longitude="-100.629692" image="real-estate-3.jpg" status="Available" statusColor="green" price="$8,500,000" location="Pearland, TX" type="Manufactured Housing" state="Colorado" available="true"}}
+				{{>real-estate latitude="38.545276" longitude="-100.039115" status="Available" statusColor="green" price="$8,500,000" location="Pearland, TX" type="Multifamily" state="Kansas" available="true"}}
+				{{>real-estate latitude="40.594005" longitude="-101.435163" image="real-estate-2.jpg" status="Available" statusColor="green" price="$8,500,000" type="Self Storage" state="Louisiana" available="true"}}
+				{{>real-estate latitude="38.799953" longitude="-101.543867" image="real-estate-3.jpg" status="Available" statusColor="green" price="$8,500,000" type="Manufactured Housing" state="Arkansas" available="true"}}
+				{{>real-estate latitude="40.392681" longitude="-101.230853" status="Available" statusColor="green" price="$8,500,000" type="Self Storage" state="Missouri" available="true"}}
+				{{>real-estate latitude="40.788891" longitude="-100.321611" image="real-estate-2.jpg" status="Available" statusColor="green" price="$8,500,000" type="Self Storage" state="Kansas" available="true"}}
+				{{>real-estate latitude="40.774299" longitude="-100.751442" image="real-estate-3.jpg" status="Available" statusColor="green" price="$8,500,000" type="Self Storage" state="Colorado" available="true"}}
+				{{>real-estate latitude="40.656551" longitude="-101.518344" status="Available" statusColor="green" price="$8,500,000" type="Self Storage" state="Texas" available="true"}}
+				{{>real-estate latitude="38.818442" longitude="-101.539993" image="real-estate-2.jpg" status="Available" statusColor="green" price="$8,500,000" type="Self Storage" state="Missouri" available="true"}}
+				{{>real-estate latitude="38.478106" longitude="-101.524019" image="real-estate-3.jpg" status="Available" statusColor="green" price="$8,500,000" type="Self Storage" state="Missouri" available="true"}}
+				{{>real-estate latitude="38.962522" longitude="-101.3185" status="Available" statusColor="green" price="$8,500,000" type="Self Storage" state="Arkansas" available="true"}}
+				{{>real-estate latitude="40.095606" longitude="-101.804488" status="Available" statusColor="green" price="$8,500,000" type="Multifamily" state="Colorado" available="true"}}
+				{{>real-estate latitude="39.35238" longitude="-100.249819" status="Available" statusColor="green" price="$8,500,000" type="Manufactured Housing" state="Arkansas" available="true"}}
+				{{>real-estate latitude="40.035417" longitude="-101.300928" status="Available" statusColor="green" price="$8,500,000" type="Self Storage" state="Kansas" available="true"}}
+				{{>real-estate latitude="42.095606" longitude="-101.804488" status="Available" statusColor="green" price="$8,500,000" type="Multifamily" state="Arkansas" available="true"}}
+			</div>
+			<div class="real-properties__map">
+				<div class="locations">
+					<div class="locations__buttons">
+						<button class="btn" type="button" id="draw-btn">Click Here To Draw On Map</button>
+						<button class="btn" type="button" id="clear-btn">Clear Map</button>
+					</div>
+					<div class="locations__caption"></div>
+					<div class="locations__map" data-latitude="40.611243698524994" data-longitude="-101.6233937638726"
+					     data-zoom="8" data-map="locations"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

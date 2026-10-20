@@ -1,0 +1,267 @@
+@import "../../base/defaults/styles/mixins.pcss";
+
+/* Variables. */
+$font-family-global: "Questrial", sans-serif;
+$border-radius-global: 0;
+$max-width-main-inner: 1920px;
+$max-width-wide-inner: 1520px;
+$max-width-narrow-inner: 1320px;
+$color-bg-custom: #1e4e8f;
+$height-element: 53px;
+
+/* CSSGen figma plugin */
+$color-text-main: #424242;
+$color-text-second: #1d4e8f;
+$color-text-grey: #78787c;
+$color-text-link: #1d4e8f;
+$color-colors-main: #1e4e8f;
+$color-colors-second: #e8e6e6;
+$color-colors-white: #fff;
+$color-colors-element: #e7eff9;
+$color-colors-light-gray: #dbdbdb;
+$color-colors-89: #898989;
+
+$color-element-hover: #266ccb;
+
+@mixin text-style-text-headline-1 {
+	font-family: $font-family-global;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: normal;
+
+	@media (--md) {
+		font-size: 62px;
+	}
+}
+
+@mixin text-style-text-headline-2 {
+	font-family: $font-family-global;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: normal;
+
+	@media (--md) {
+		font-size: 48px;
+	}
+}
+
+@mixin text-style-text-headline-3 {
+	font-family: $font-family-global;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 34px;
+}
+
+@mixin text-style-text-headline-4 {
+	font-family: $font-family-global;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+@mixin text-style-text-links {
+	font-family: $font-family-global;
+	font-weight: 400;
+	font-size: 18px;
+	font-style: normal;
+	line-height: 20px;
+	text-decoration: none;
+	text-transform: none;
+}
+
+@mixin text-style-text-text-main {
+	font-family: $font-family-global;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+	text-decoration: none;
+}
+
+@mixin text-style-text-text-1 {
+	font-family: $font-family-global;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 1.2;
+	text-decoration: none;
+}
+
+@mixin text-style-text-text-2 {
+	font-family: $font-family-global;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-decoration: none;
+}
+
+@mixin text-style-text-text-3 {
+	font-family: $font-family-global;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	text-decoration: none;
+}
+
+@mixin btn {
+	@include focus;
+	@include text-style-text-links;
+
+	display: inline-block;
+	padding: 16px 34px 15px;
+	color: $color-colors-white;
+	letter-spacing: normal;
+	background: $color-colors-main;
+	border: 1px solid $color-colors-main;
+	border-radius: 30px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.3s, border 0.3s, color 0.3s;
+
+	&:--enter {
+		color: $color-colors-white;
+		background: $color-element-hover;
+		border-color: $color-element-hover;
+		text-decoration: none;
+	}
+
+	&[disabled] {
+		background: $color-colors-light-gray;
+		border: 1px solid $color-colors-light-gray;
+		color: $color-colors-89;
+		pointer-events: none;
+		outline: none;
+		opacity: 1;
+	}
+}
+
+@mixin link {
+	@include text-style-text-links;
+
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	color: $color-text-main;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 4px;
+	background: none;
+	border: none;
+	padding: 0;
+	transition: color 0.3s, text-decoration 0.3s;
+
+	svg {
+		flex-shrink: 0;
+	}
+
+	&:--enter {
+		color: $color-colors-main;
+	}
+
+	&_reverse {
+		flex-direction: row-reverse;
+
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+@mixin input {
+	@include text-style-text-text-main;
+
+	display: block;
+	width: 100%;
+	height: $height-element;
+	border-radius: 8px;
+	border: none;
+	background: transparent;
+	box-shadow: 0 1px 10px 1px rgba(29, 78, 143, 0.1);
+	color: $color-text-second;
+	padding: 22px 20px 7px;
+	max-width: 100%;
+	cursor: pointer;
+	transition: background 0.3s;
+
+	&:hover {
+		background: rgba(182, 201, 227, 0.1);
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible:not(.disabled-visual-focus) {
+		outline: 1px auto $color-text-second;
+		outline-offset: 1px;
+	}
+
+	&:-webkit-autofill,
+	&:-webkit-autofill:focus {
+		transition: background-color 0s 600000s, color 0s 600000s;
+	}
+
+	&[aria-invalid="true"] {
+		border: 1px solid #f00;
+	}
+}
+
+@mixin woo-link {
+	@include text-style-text-links;
+
+	padding-bottom: 3px;
+	border-bottom: 1px solid;
+	transition: color 0.3s;
+
+	&:--enter {
+		color: $color-element-hover;
+		text-decoration: none;
+	}
+}
+
+@mixin tns-controls {
+	.tns {
+		&-outer {
+			position: relative;
+		}
+
+		&-controls {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			pointer-events: none;
+			padding: 0 10px;
+
+			@media (--lg) {
+				padding: 0 23px;
+			}
+
+			button {
+				width: 50px;
+				height: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #fdfcf9;
+				background: transparent;
+				border: none;
+				border-radius: 50%;
+				pointer-events: auto;
+				padding: 0;
+				transition: color 0.3s, background 0.3s, border 0.3s;
+
+				@media (--sm) {
+					color: $color-text-second;
+					background: rgba(255, 255, 255, 0.76);
+
+					&:--enter {
+						background: $color-colors-white;
+					}
+				}
+			}
+		}
+	}
+}

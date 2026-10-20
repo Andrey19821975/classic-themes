@@ -1,0 +1,44 @@
+@import "../../../../../src/styles/variables-and-mixins.pcss";
+
+.blog-articles {
+	padding: 60px 0;
+
+	@media (--lg) {
+		padding: 80px 0 120px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap-reverse;
+		gap: 60px 30px;
+		justify-content: center;
+
+		@media (--lg) {
+			justify-content: space-between;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 800px;
+
+		@media (--lg) {
+			width: calc(100% - 300px);
+		}
+	}
+
+	&__items {
+		list-style: none;
+		padding: 0 0 17px;
+		margin: 0;
+	}
+
+	/* todo: move pagination.pcss or other block */
+	.pagination {
+		margin-bottom: 60px;
+
+		@media (--lg) {
+			margin-bottom: 95px;
+		}
+	}
+}

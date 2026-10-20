@@ -1,0 +1,63 @@
+{
+    "key": "group_663cc93e8d5f0",
+    "title": "FC: Real Properties Available",
+    "fields": [
+        {
+            "key": "field_663cc9572e8c1",
+            "label": "Real Properties Available",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Real Properties Available",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_672cc97ce5df4",
+            "label": "Show \"Filter by Type\"",
+            "name": "show_filter_type",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1730988448
+}

@@ -1,0 +1,1 @@
+export default function e(e){return e.family.toLowerCase().replace(/ /g,"-")+"-"+e.weight+"-"+e.style}

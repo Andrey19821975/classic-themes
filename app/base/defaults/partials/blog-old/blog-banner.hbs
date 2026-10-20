@@ -1,0 +1,35 @@
+<section class="blog-banner">
+	<div class="blog-banner__wrapper">
+		<div class="blog-banner__content">
+			<h1 class="blog-banner__title">Lorem ipsum</h1>
+			<p class="blog-banner__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra
+				scelerisque ut ante venenatis metus,
+				nec cras facilisis. Eu arcu, tincidunt lectus faucibus laoreet.</p>
+			{{#> gform-form
+				showError=false
+				showConfirmation=false
+			}}
+				{{#> gform-body showError=showError}}
+					{{> gform-email
+						showError=showError
+						customClass=""
+						hideLabel=false
+						labelText="Email"
+						required=true
+						fieldSize="medium"
+						placeholderText=""
+					}}
+				{{/gform-body}}
+
+				{{> gform-footer
+					type="button"
+					text="Subscribe"
+				}}
+
+			{{/gform-form}}
+		</div>
+		<div class="blog-banner__image-wrap">
+			<img class="blog-banner__image" src="{{root}}assets/images/blog/blog-banner.jpg" alt="">
+		</div>
+	</div>
+</section>

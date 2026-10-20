@@ -1,0 +1,56 @@
+@import "../../../../../src/styles/variables-and-mixins.pcss";
+
+.default-page {
+	padding-top: 40px;
+	padding-bottom: 60px;
+
+	@media (--lg) {
+		padding-bottom: 135px;
+	}
+
+	&__h1 {
+		@include text-style-text-headline-1;
+
+		margin-bottom: 20px;
+	}
+
+	&__h2 {
+		@include text-style-text-headline-3;
+
+		padding-top: 40px;
+		margin-bottom: 10px;
+	}
+
+	&__h3 {
+		@include text-style-text-headline-3;
+
+		padding-top: 40px;
+		margin-bottom: 30px;
+	}
+
+	&__h4 {
+		@include text-style-text-links;
+
+		padding-top: 10px;
+		margin-bottom: 15px;
+	}
+
+	&__p {
+		@include text-style-text-text-2;
+
+		margin-bottom: 15px;
+	}
+
+	ul,
+	ol {
+		padding-left: 20px;
+
+		li {
+			@include text-style-text-text-2;
+
+			&:not(:last-of-type) {
+				margin-bottom: 5px;
+			}
+		}
+	}
+}

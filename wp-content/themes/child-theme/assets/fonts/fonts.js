@@ -1,0 +1,1 @@
+export default{"questrial-400-normal":["Questrial","local('Questrial Regular'), local(Questrial-Regular), local(Questrial), url(Questrial-Regular.woff2) format('woff2')",{style:"normal",weight:400,display:"swap"}]};

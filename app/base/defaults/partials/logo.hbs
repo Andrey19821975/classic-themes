@@ -1,0 +1,23 @@
+<div class="logo">
+	{{#unlesspage 'home'}}
+	<a href="{{root}}">
+	{{/unlesspage}}
+	{{#if logo1}}
+		{{#if (isSvg logo1)}}
+			<span class="screen-reader-text">Site Name</span>
+			{{svgInline logo1}}
+		{{else}}
+			<img src="{{root}}assets/images/{{logo1}}" alt="">
+		{{/if}}
+	{{/if}}
+	{{#if logo2}}
+		{{#if (isSvg logo2)}}
+			{{svgInline logo2}}
+		{{else}}
+			<img src="{{root}}assets/images/{{logo2}}" alt="">
+		{{/if}}
+	{{/if}}
+	{{#unlesspage 'home'}}
+	</a>
+	{{/unlesspage}}
+</div>

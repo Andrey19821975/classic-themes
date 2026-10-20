@@ -1,0 +1,56 @@
+@import "../../../../src/styles/variables-and-mixins.pcss";
+
+.menu-site-map {
+	&__items {
+		padding-left: 20px;
+		list-style-type: disc;
+	}
+
+	&__item {
+		margin-bottom: 15px;
+
+		&::marker {
+			color: $color-colors-main;
+		}
+
+		&_level_top {
+			&::marker {
+				font-size: 17px;
+			}
+		}
+
+		&_level_sub {
+			margin-bottom: 10px;
+
+			&::marker {
+				font-size: 13px;
+			}
+		}
+	}
+
+	&__link {
+		@include text-style-text-links;
+
+		color: $color-text-main;
+		transition: color 0.3s;
+
+		&_level_top {
+			font-weight: 500;
+		}
+
+		&_level_sub {
+			font-weight: 400;
+		}
+
+		&:--enter {
+			color: $color-text-link;
+			text-decoration: none;
+		}
+	}
+
+	&__sub-items {
+		margin: 10px 0;
+		padding-left: 20px;
+		list-style-type: disc;
+	}
+}

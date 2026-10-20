@@ -1,0 +1,49 @@
+<aside class="blog-content__sidebar">
+	<h2 class="screen-reader-text">Sidebar</h2>
+	<div class="blog-widget blog-widget_search">
+		<h3 class="blog-widget__title">Search</h3>
+		<form role="search" action="">
+			<label for="blog-widget_search__input" class="blog-widget__label">
+				Search query
+			</label>
+			<div class="blog-widget__input-wrapper">
+				<input type="search" id="blog-widget_search__input" class="blog-widget__input" name="s" required>
+				<button type="submit" class="blog-widget__button">
+					<span class="screen-reader-text">
+						Search
+					</span>
+				</button>
+			</div>
+		</form>
+	</div>
+	<div class="blog-widget blog-widget_form">
+		<h3 class="blog-widget__title">Stay Connected</h3>
+		<div>
+			{{#> gform-form
+				showError=false
+				showConfirmation=false
+			}}
+				{{#> gform-body showError=showError}}
+					{{> gform-email
+						showError=showError
+						customClass=""
+						hideLabel=false
+						labelText="Email"
+						required=false
+						fieldSize="medium"
+						placeholderText=""
+						descriptionText=""
+					}}
+				{{/gform-body}}
+				{{> gform-footer
+					type="button"
+					text="Subscribe by Email"
+				}}
+			{{/gform-form}}
+		</div>
+	</div>
+	<div class="blog-widget blog-widget_social-links">
+		<h3 class="blog-widget__title">Follow us</h3>
+		{{>social-links class="social-links_color social-links_size_50 social-links_gap_20"}}
+	</div>
+</aside>

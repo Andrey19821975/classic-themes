@@ -1,0 +1,39 @@
+<section class="blog-newsletter {{class}}">
+	<div class="blog-newsletter__wrapper">
+		<div class="blog-newsletter__content">
+			{{#if avatars}}
+				<div class="blog-newsletter__images">
+					<img class="blog-newsletter__image" src="{{root}}assets/images/avatar-1.jpg" alt="">
+					<img class="blog-newsletter__image" src="{{root}}assets/images/avatar-2.jpg" alt="">
+					<img class="blog-newsletter__image" src="{{root}}assets/images/avatar-3.jpg" alt="">
+				</div>
+			{{/if}}
+			<h2 class="blog-newsletter__title">Sign Up for Our Newsletter</h2>
+			{{#if description}}
+				<p class="blog-newsletter__description">{{description}}</p>
+			{{/if}}
+		</div>
+		{{#> gform-form
+			showError=false
+			showConfirmation=false
+		}}
+			{{#> gform-body showError=showError}}
+				{{> gform-email
+					showError=showError
+					customClass=""
+					hideLabel=false
+					labelText="Email"
+					required=true
+					fieldSize="medium"
+					placeholderText=""
+				}}
+			{{/gform-body}}
+
+			{{> gform-footer
+				type="button"
+				text="Sign up"
+			}}
+
+		{{/gform-form}}
+	</div>
+</section>

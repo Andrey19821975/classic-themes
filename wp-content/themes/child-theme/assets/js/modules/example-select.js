@@ -1,0 +1,1 @@
+import e from"../npm-proxy/tom-select.js";import s from"../libs/live-dom.js";s("select.example-select__select_simple",{init(){new e(this)}}),s("select.example-select__select_checkboxes",{init(){new e(this,{plugins:["checkbox_options"]})}});

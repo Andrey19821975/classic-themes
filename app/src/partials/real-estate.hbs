@@ -1,0 +1,30 @@
+<div class="real-estate" data-latitude="{{latitude}}" data-longitude="{{longitude}}" data-type="{{type}}" data-state="{{state}}">
+	<div class="real-estate__image">
+		<img class="real-estate__img"
+		     src="{{root}}assets/images/{{#if image}}{{image}}{{else}}real-estate-1.jpg{{/if}}" alt="">
+		{{#if available}}
+			<span class="real-estate__icon">{{svgInline 'web-icon.svg'}}</span>
+			<button class="real-estate__add-to-wishlist" type="button">
+				{{svgInline 'wishlist-icon.svg'}}
+				<span class="screen-reader-text">Add to wishlist</span>
+			</button>
+		{{/if}}
+	</div>
+	<div class="real-estate__content">
+		{{#if status}}<span class="real-estate__status" style="--status-color: {{statusColor}};">{{status}}</span>{{/if}}
+		<h2 class="real-estate__title">
+			{{#if available}}
+				<a href="#" class="real-estate__link">{{#if title}}{{title}}{{else}}Lorem Ipsum{{/if}}</a>
+			{{else}}
+				{{#if title}}{{title}}{{else}}Lorem Ipsum{{/if}}
+			{{/if}}
+		</h2>
+		{{#if price}}<p class="real-estate__price">{{price}}</p>{{/if}}
+		<ul class="real-estate__ul">
+			<li class="real-estate__li">{{svgInline 'area-icon.svg'}}{{#if area}}{{area}}{{else}}15.1 Acres{{/if}}</li>
+			<li class="real-estate__li">{{svgInline 'units-icon.svg'}}{{#if units}}{{units}}{{else}}127 Units{{/if}}</li>
+			<li class="real-estate__li">{{svgInline 'location-icon-2.svg'}}{{state}}</li>
+			<li class="real-estate__li">{{svgInline 'type-icon.svg'}}{{type}}</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+---
+pageTitle: Site Map
+---
+
+<link rel="stylesheet" href="{{root}}assets/css/menu-site-map.css">
+<link rel="stylesheet" href="{{root}}assets/css/site-map.css">
+<section class="site-map">
+	<div class="inner">
+		<h1 class="site-map__title">Site Map</h1>
+		{{#>menu
+			class="menu-site-map"
+			label="Site Map"
+		}}
+			{{>menu-item title="Home"}}
+			{{#>menu-item title="Blog"}}
+				{{#>sub-menu}}
+					{{>menu-item title="Shop"}}
+					{{>menu-item title="Cart"}}
+					{{>menu-item title="Checkout"}}
+					{{>menu-item title="Wishlist"}}
+				{{/sub-menu}}
+			{{/menu-item}}
+			{{>menu-item title="My account"}}
+			{{>menu-item title="Terms of Service"}}
+			{{>menu-item title="Privacy Policy"}}
+		{{/menu}}
+	</div>
+</section>

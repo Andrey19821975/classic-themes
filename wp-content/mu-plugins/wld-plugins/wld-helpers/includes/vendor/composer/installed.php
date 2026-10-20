@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => 'dev-dev',
+        'version' => 'dev-dev',
+        'reference' => 'e1a1b7f22346f590205eb36084ce06633d518cfb',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-dev',
+            'version' => 'dev-dev',
+            'reference' => 'e1a1b7f22346f590205eb36084ce06633d518cfb',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'kint-php/kint' => array(
+            'pretty_version' => '5.1.0',
+            'version' => '5.1.0.0',
+            'reference' => '128303461092734a1e3cb4beb1eea9afe7a5a0ee',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../kint-php/kint',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+        'roave/security-advisories' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '36bccaa62f290af9ac4f0d761e937affe0495b3f',
+            'type' => 'metapackage',
+            'install_path' => NULL,
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+    ),
+);

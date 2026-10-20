@@ -1,0 +1,1 @@
+export default function t(t,e=".title a"){let o,n;const u=t.querySelector(e);t.style.cursor="pointer",t.onmousedown=t=>{0===t.button&&(o=+new Date)},t.onmouseup=t=>{0===t.button&&(n=+new Date,n-o<200&&u.click())}}

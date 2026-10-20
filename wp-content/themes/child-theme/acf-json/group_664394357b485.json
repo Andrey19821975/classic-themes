@@ -1,0 +1,444 @@
+{
+    "key": "group_664394357b485",
+    "title": "FC: Contact Us",
+    "fields": [
+        {
+            "key": "field_672cca7e26cc1",
+            "label": "Show Buttons",
+            "name": "show_buttons",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6643944bef035",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "wld_height": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_6643a81191b28",
+            "label": "Members",
+            "name": "members",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Member",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6643a83291b29",
+                    "label": "Member",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 0,
+                    "endpoint": 0,
+                    "parent_repeater": "field_6643a81191b28"
+                },
+                {
+                    "key": "field_6643b05891b2e",
+                    "label": "Type",
+                    "name": "type",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "property_type",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "bidirectional": 0,
+                    "multiple": 0,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_6643a81191b28"
+                },
+                {
+                    "key": "field_6643a84f91b2a",
+                    "label": "Area",
+                    "name": "area_self_storage",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6643b05891b2e",
+                                "operator": "==",
+                                "value": "90"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "LA": "LA",
+                        "FL": "FL",
+                        "MO": "MO",
+                        "NM": "NM",
+                        "GA": "GA",
+                        "OK": "OK",
+                        "AL": "AL",
+                        "AR": "AR",
+                        "KS": "KS",
+                        "CO": "CO",
+                        "MS": "MS",
+                        "North TX": "North TX",
+                        "South TX": "South TX"
+                    },
+                    "default_value": [],
+                    "return_format": "value",
+                    "allow_custom": 0,
+                    "layout": "horizontal",
+                    "toggle": 0,
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_6643a81191b28"
+                },
+                {
+                    "key": "field_668ce43c0ba17",
+                    "label": "Area",
+                    "name": "area_manufactured_housing",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6643b05891b2e",
+                                "operator": "==",
+                                "value": "91"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "LA": "LA",
+                        "FL": "FL",
+                        "MO": "MO",
+                        "NM": "NM",
+                        "GA": "GA",
+                        "OK": "OK",
+                        "AL": "AL",
+                        "AR": "AR",
+                        "KS": "KS",
+                        "CO": "CO",
+                        "MS": "MS",
+                        "TX": "TX"
+                    },
+                    "default_value": [],
+                    "return_format": "value",
+                    "allow_custom": 0,
+                    "layout": "horizontal",
+                    "toggle": 0,
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_6643a81191b28"
+                },
+                {
+                    "key": "field_668ce4c766553",
+                    "label": "Area",
+                    "name": "area_multifamily",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6643b05891b2e",
+                                "operator": "==",
+                                "value": "92"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "LA": "LA",
+                        "FL": "FL",
+                        "MO": "MO",
+                        "NM": "NM",
+                        "GA": "GA",
+                        "OK": "OK",
+                        "AL": "AL",
+                        "AR": "AR",
+                        "KS": "KS",
+                        "CO": "CO",
+                        "MS": "MS",
+                        "Panhandle TX": "Panhandle TX",
+                        "North TX": "North TX",
+                        "South TX": "South TX",
+                        "East TX": "East TX"
+                    },
+                    "default_value": [],
+                    "return_format": "value",
+                    "allow_custom": 0,
+                    "layout": "horizontal",
+                    "toggle": 0,
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_6643a81191b28"
+                },
+                {
+                    "key": "field_6643af7a91b2b",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "thumbnail",
+                    "parent_repeater": "field_6643a81191b28"
+                },
+                {
+                    "key": "field_6643af8591b2c",
+                    "label": "Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "title",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "replace": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "default_level": 3,
+                    "parent_repeater": "field_6643a81191b28"
+                },
+                {
+                    "key": "field_6643b03f91b2d",
+                    "label": "Position",
+                    "name": "position",
+                    "aria-label": "",
+                    "type": "title",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "replace": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "default_level": 4,
+                    "parent_repeater": "field_6643a81191b28"
+                },
+                {
+                    "key": "field_66446eb73c8f2",
+                    "label": "Contacts",
+                    "name": "contacts",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "parent_repeater": "field_6643a81191b28",
+                    "sub_fields": [
+                        {
+                            "key": "field_664470023c8f3",
+                            "label": "Office",
+                            "name": "office",
+                            "aria-label": "",
+                            "type": "wld_contact_link",
+                            "instructions": "Office phone.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "class_attr": "",
+                            "select_link_type": 0,
+                            "link_type": "phone",
+                            "return_format": "html",
+                            "custom_class": 1,
+                            "default_value": {
+                                "url": "",
+                                "title": "",
+                                "number": "",
+                                "type": "",
+                                "class": ""
+                            }
+                        },
+                        {
+                            "key": "field_6644704e3c8f4",
+                            "label": "Cell",
+                            "name": "cell",
+                            "aria-label": "",
+                            "type": "wld_contact_link",
+                            "instructions": "Cell phone.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "class_attr": "",
+                            "select_link_type": 0,
+                            "link_type": "phone",
+                            "return_format": "html",
+                            "custom_class": 1,
+                            "default_value": {
+                                "url": "",
+                                "title": "",
+                                "number": "",
+                                "type": "",
+                                "class": ""
+                            }
+                        },
+                        {
+                            "key": "field_664470693c8f5",
+                            "label": "Email",
+                            "name": "email",
+                            "aria-label": "",
+                            "type": "wld_contact_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "class_attr": "",
+                            "select_link_type": 0,
+                            "link_type": "email",
+                            "return_format": "html",
+                            "custom_class": 1,
+                            "default_value": {
+                                "url": "",
+                                "title": "",
+                                "number": "",
+                                "type": "",
+                                "class": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1730988689
+}

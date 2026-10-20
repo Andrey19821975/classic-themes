@@ -1,0 +1,26 @@
+@import "../../variables-and-mixins.pcss";
+@import "../../../../base/defaults/styles/parts/blog-and-defaults-pages/search-form.pcss";
+
+.search-form {
+	@modifier (search-results-page) {
+		&__wrapper {
+			max-width: calc($max-width-narrow-inner - 30px);
+			border-radius: 4px;
+		}
+
+		&__input {
+			@include input;
+
+			padding: 14px 30px 11px;
+			background: $color-colors-white;
+
+			&:hover {
+				background: $color-colors-white;
+			}
+		}
+
+		&__submit {
+			border-radius: 8px;
+		}
+	}
+}

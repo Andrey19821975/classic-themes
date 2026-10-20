@@ -1,0 +1,11 @@
+<dialog id="{{id}}" class="popup {{class}} {{#unless disabledStyles}}popup_base popup_inline{{/unless}}" autofocus>
+	<div class="popup__wrapper">
+		<button class="popup__close-btn">
+			{{svgInline "popup-close.svg" "popup__close-icon"}}
+			<span class="popup__close-text">Close</span>
+		</button>
+		<div class="popup__content">
+			{{>@partial-block}}
+		</div>
+	</div>
+</dialog>

@@ -1,0 +1,23 @@
+{{#>set-context
+	wrapper=(default wrapper "nav")
+}}
+	<{{wrapper}}
+	class="{{class}} {{class}}_{{modifier}}"
+	aria-label="{{label}}"
+	>
+	<ul
+		class="{{class}}__items"
+		{{#if expend}}
+		data-expend-menu="{{expend}}"
+		{{/if}}
+		{{#if keyboard}}
+		data-keyboard-menu="{{keyboard}}"
+		{{/if}}
+		{{#if hover}}
+		data-hover-menu
+		{{/if}}
+	>
+		{{> @partial-block level=1}}
+	</ul>
+	</{{wrapper}}>
+{{/set-context}}

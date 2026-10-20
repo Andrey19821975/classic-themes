@@ -1,0 +1,31 @@
+<li class="blog-items__item">
+	<article class="blog-item{{#ifequal 1 index}} blog-item_two-columns{{/ifequal }} accessibility-card">
+		<div class="blog-item__thumbnail">
+			<img class="blog-item__image" src="{{root}}{{image}}" alt="">
+		</div>
+		<div class="blog-item__text">
+			<h2 class="blog-item__title title">
+				<a class="blog-item__link" href="#" aria-describedby="read-more-{{index}}">
+					{{#ifequal 1 index}}
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit scelerisque fermentum.
+					{{else}}
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					{{/ifequal }}
+				</a>
+			</h2>
+			<p class="blog-item__except">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, sapien vel
+				non leo arcu venenatis...</p>
+			<div class="blog-item__posted">Posted - February 24, 2021</div>
+			<div class="blog-item__more" aria-hidden="true" id="read-more-{{index}}">Learn More</div>
+			<aside class="blog-categories blog-item__categories" aria-label="Categories">
+				{{#ifequal 1 index}}
+					<a class="blog-categories__link" href="#" rel="category tag">lorem ipsum</a>
+					<a class="blog-categories__link" href="#" rel="category tag">lorem ipsum</a>
+				{{else}}
+					<a class="blog-categories__link" href="#" rel="category tag">lorem</a>
+					<a class="blog-categories__link" href="#" rel="category tag">ipsum</a>
+				{{/ifequal }}
+			</aside>
+		</div>
+	</article>
+</li>

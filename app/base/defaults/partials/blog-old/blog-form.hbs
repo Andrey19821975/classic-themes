@@ -1,0 +1,42 @@
+<section class="blog-form">
+	<div class="inner">
+		<h2 class="blog-form__title">Stay in the Know</h2>
+		<p class="blog-form__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Vitae elit sem volutpat
+			laoreet dolor amet.
+		</p>
+		{{#> gform-form
+			showError=false
+			showConfirmation=false
+		}}
+			{{#> gform-body showError=showError}}
+				{{> gform-singleLineText
+					showError=showError
+					customClass=""
+					hideLabel=false
+					labelText="Name"
+					required=false
+					fieldSize="medium"
+					placeholderText=""
+				}}
+
+				{{> gform-email
+					showError=showError
+					customClass=""
+					hideLabel=false
+					labelText="Email"
+					required=false
+					fieldSize="medium"
+					placeholderText=""
+				}}
+			{{/gform-body}}
+
+			{{> gform-footer
+				type="button"
+				text="Keep Me Informed"
+			}}
+
+		{{/gform-form}}
+		<h3 class="blog-form__subtitle">Follow us on Social!</h3>
+		{{>social-links class="social-links_color social-links_size_50 social-links_gap_20"}}
+	</div>
+</section>

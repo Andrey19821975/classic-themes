@@ -1,0 +1,34 @@
+---
+pageTitle: Blog page
+---
+
+<link rel="stylesheet" href="{{root}}assets/css/blog-and-defaults-pages.css">
+<link rel="stylesheet" href="{{root}}assets/css/gravity-forms.css">
+
+<h1 class="blog-title">Blog</h1>
+
+{{>blog-preview}}
+
+{{>blog-newsletter class="blog-newsletter_top"}}
+
+<section class="blog-articles">
+	<div class="inner">
+		<div class="blog-articles__wrapper">
+			<div class="blog-articles__content">
+				<ul class="blog-articles__items">
+					{{>blog-article index=1}}
+					{{>blog-article index=2}}
+					{{>blog-article index=3}}
+				</ul>
+				{{>pagination}}
+				{{>blog-newsletter
+					class="blog-newsletter_bottom"
+					description="Lorem ipsum dolor sit amet consectetur. Viverra pulvinar facilisis sed volutpat nec."
+					avatars=true
+				}}
+			</div>
+			{{>blog-sidebar archive=true}}
+		</div>
+	</div>
+</section>
+

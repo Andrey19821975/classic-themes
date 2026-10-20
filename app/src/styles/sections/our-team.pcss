@@ -1,0 +1,160 @@
+@import "../variables-and-mixins.pcss";
+
+.our-team {
+	padding: 80px 0;
+
+	@media (--lg) {
+		padding: 100px 0;
+	}
+
+	&:not(:last-child) {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 1px;
+			width: calc(100% - 70px);
+			max-width: 1290px;
+			border-bottom: 1px solid rgba(120, 120, 124, 0.4);
+
+			@media (--lg) {
+				width: calc(100% - 30px);
+			}
+		}
+	}
+
+	.inner {
+		max-width: $max-width-narrow-inner;
+	}
+
+	&__wrapper {
+		display: grid;
+		gap: clamp(2.5rem, 1.1458rem + 5.5556vw, 5.625rem) clamp(1.875rem, -7.7491rem + 15.0376vw, 4.375rem);
+
+		@media (--sm) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (--md) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&__item {
+		width: 100%;
+	}
+
+	&__image {
+		margin-bottom: 30px;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		min-height: 260px;
+		object-fit: cover;
+		background: $color-colors-element;
+	}
+
+	&__title {
+		@include text-style-text-headline-3;
+
+		color: $color-text-second;
+		margin-bottom: 5px;
+	}
+
+	&__position {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 16px;
+		color: $color-text-grey;
+		margin-bottom: 20px;
+	}
+
+	&__p {
+		@include text-style-text-text-main;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		&:has(&&__read-more) {
+			line-height: 20px;
+			margin: 30px 0 0;
+		}
+	}
+
+	&__read-more {
+		@include link;
+
+		color: $color-text-grey;
+	}
+}
+
+.our-team-popup {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__image {
+		width: 100%;
+
+		@media (--lg) {
+			width: 42%;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		min-height: 260px;
+		object-fit: cover;
+		background: $color-colors-element;
+
+		@media (--lg) {
+			height: 100%;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		padding: 30px;
+
+		@media (--lg) {
+			flex: 1 0 0;
+			padding: 66px 50px;
+		}
+	}
+
+	&__title {
+		@include text-style-text-headline-3;
+
+		color: $color-text-second;
+		margin-bottom: 5px;
+	}
+
+	&__position {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 16px;
+		color: $color-text-grey;
+		margin-bottom: 20px;
+	}
+
+	&__p {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+
+		@media (--lg) {
+			line-height: 28px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}

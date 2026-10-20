@@ -1,0 +1,86 @@
+@import "../../variables-and-mixins.pcss";
+
+.menu-header-main {
+	display: none;
+
+	&_tablet {
+		@media (--md) {
+			display: block;
+
+			&&__items {
+				width: max-content;
+			}
+
+			&&__item {
+				border-bottom: 0.8px solid rgba(97, 97, 95, 0.16);
+			}
+
+			&&__link {
+				padding: 5px 2px 4px;
+			}
+
+			&:last-child {
+				&&__items {
+					margin-left: auto;
+				}
+
+				&&__item {
+					text-align: right;
+				}
+			}
+		}
+
+		@media (--lg) {
+			display: none;
+		}
+	}
+
+	&_desktop {
+		@media (--lg) {
+			display: block;
+
+			&&__items {
+				display: flex;
+				gap: clamp(1.5625rem, -2.9536rem + 7.0565vw, 3.75rem);
+			}
+
+			&:first-child {
+				&&__items {
+					justify-content: flex-end;
+				}
+			}
+		}
+	}
+
+	@media (--md) {
+		width: 100%;
+		transition: transform 0.5s ease-out;
+
+		&__link {
+			display: inline-block;
+			font-weight: 400;
+			font-size: clamp(0.875rem, 0.5778rem + 0.6192vw, 1.125rem);
+			line-height: 20px;
+			color: $color-text-grey;
+			text-decoration: underline;
+			text-decoration-thickness: 1px;
+			text-underline-offset: 3px;
+			text-decoration-color: transparent;
+			white-space: nowrap;
+			outline-color: $color-colors-main;
+			outline-offset: 3px;
+			transition: color 0.3s, text-decoration 0.3s;
+
+			&_current,
+			&:--enter {
+				color: $color-text-link;
+				text-decoration-color: $color-text-link;
+				text-decoration-thickness: 1px;
+			}
+
+			&_no-clickable {
+				pointer-events: none;
+			}
+		}
+	}
+}

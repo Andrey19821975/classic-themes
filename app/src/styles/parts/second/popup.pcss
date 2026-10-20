@@ -1,0 +1,217 @@
+@import "../../variables-and-mixins.pcss";
+
+.popup {
+	&::backdrop {
+		background: rgba(14, 39, 72, 0.7);
+		opacity: 1;
+	}
+
+	&_download-om {
+		&[open] {
+			&&__wrapper {
+				animation: fade 0.5s ease-out forwards;
+			}
+		}
+	}
+
+	&__title {
+		text-align: center;
+
+		@include text-style-text-headline-2;
+	}
+
+	&__close-btn {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		width: 44px;
+		height: 44px;
+		color: #777779;
+		line-height: 20px;
+		padding: 0;
+		background: none;
+		border: none;
+		cursor: pointer;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $color-text-main;
+		}
+
+		span {
+			@include screen-reader-text;
+		}
+	}
+
+	&__close-icon {
+		width: 18px;
+		height: 18px;
+	}
+
+	&__close-text {
+		@include screen-reader-text;
+	}
+
+	@modifier (modal) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		scrollbar-gutter: stable;
+		background: transparent;
+	}
+
+	@modifier (base) {
+		&__wrapper {
+			width: calc(100% - 30px);
+			max-width: 1000px;
+			position: relative;
+			margin: 15px;
+			border-radius: 4px;
+		}
+	}
+
+	@modifier (base) and (modal) {
+		overflow: auto;
+		scrollbar-gutter: stable;
+		text-align: center;
+		white-space: nowrap;
+
+		&::after {
+			display: inline-block;
+			vertical-align: middle;
+			width: 0;
+			height: 103%;
+			content: "";
+		}
+
+		&__wrapper {
+			display: inline-block;
+			vertical-align: middle;
+			white-space: normal;
+			text-align: left;
+		}
+	}
+
+	@modifier (inline) {
+		&__wrapper {
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+			padding: 44px 15px 15px;
+			background: $color-colors-white;
+		}
+	}
+
+	@modifier (iframe) {
+		&__wrapper {
+			padding: 44px 0 0;
+		}
+
+		&__iframe {
+			width: 100%;
+		}
+	}
+
+	@modifier (video) {
+		&__iframe {
+			aspect-ratio: 16/9;
+			background: #000;
+		}
+
+		&__close-icon {
+			color: #000;
+		}
+	}
+
+	@modifier (our-team) {
+		&__wrapper {
+			border-radius: 0;
+			padding: 0;
+			max-width: 440px;
+
+			@media (--lg) {
+				max-width: 1000px;
+			}
+		}
+
+		&__close-btn {
+			color: $color-text-main;
+
+			@media (--lg) {
+				color: #b8b8b8;
+
+				&:hover {
+					color: $color-text-main;
+				}
+			}
+		}
+
+		&::backdrop {
+			background: #000;
+			opacity: 0.5;
+		}
+	}
+
+	@modifier (download-om) {
+		&__wrapper {
+			background: #f1f1f1;
+			border-radius: 0;
+			max-width: 816px;
+			min-height: 350px;
+			padding: 60px 35px;
+			opacity: 0;
+		}
+
+		&__content {
+			max-width: 700px;
+			margin: 0 auto;
+		}
+
+		&__title {
+			font-weight: 700;
+			font-size: clamp(1.375rem, 1.0183rem + 1.4634vw, 1.75rem);
+			line-height: 1.2;
+			color: $color-text-second;
+			margin-bottom: 30px;
+		}
+
+		.gform {
+			&_wrapper {
+				max-width: 500px;
+				margin: 0 auto;
+
+				input:not([type="radio"], [type="checkbox"], [type="submit"], [type="button"], [type="image"], [type="file"]) {
+					border-radius: 30px;
+				}
+			}
+
+			&_fields {
+				gap: 10px;
+			}
+
+			&_footer {
+				width: 100%;
+
+				@media (--xs) {
+					width: max-content;
+					margin: 0 auto;
+				}
+			}
+
+			&_button {
+				width: 100%;
+			}
+
+			&_confirmation_message {
+				color: $color-text-main;
+			}
+		}
+	}
+}
+
+@keyframes fade {
+	100% {
+		opacity: 1;
+	}
+}

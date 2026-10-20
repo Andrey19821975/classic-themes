@@ -1,0 +1,62 @@
+@import "../../../../../src/styles/variables-and-mixins.pcss";
+
+.blog-post {
+	padding: 50px 0 80px;
+
+	@media (--lg) {
+		padding-bottom: 120px;
+	}
+
+	&__back {
+		margin-bottom: 50px;
+	}
+
+	&__back-link {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 22px;
+		color: $color-colors-89;
+		border-bottom: 1px solid;
+		padding-bottom: 4px;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		width: fit-content;
+		transition: 0.3s;
+
+		&:--enter {
+			color: $color-colors-main;
+			text-decoration: none;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 50px 30px;
+
+		@media (--lg) {
+			justify-content: space-between;
+		}
+	}
+
+	&__left {
+		max-width: 800px;
+
+		@media (--lg) {
+			width: calc(100% - 300px);
+		}
+	}
+
+	&__right {
+		max-width: 800px;
+
+		@media (--lg) {
+			width: 270px;
+			position: sticky;
+			top: 200px;
+		}
+	}
+}

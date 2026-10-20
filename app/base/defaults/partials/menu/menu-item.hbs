@@ -1,0 +1,20 @@
+{{#>set-context href=(default href "#")}}
+	<li class="
+		{{class}}__item
+		{{class}}__item_level_{{level}}
+		{{#if subMenu}}{{class}}__item_level_sub{{else}}{{class}}__item_level_top{{/if}}
+		{{#if modifier}}{{class}}__item_{{modifier}}{{/if}}
+		{{#if @partial-block}}{{class}}__item_has_sub-menu{{/if}}
+	">
+		<a href="{{href}}"
+		   class="
+			{{class}}__link
+			{{class}}__link_level_{{level}}
+			{{#if subMenu}}{{class}}__link_level_sub{{else}}{{class}}__link_level_top{{/if}}
+		    {{#if modifier}}{{class}}__link_{{modifier}}{{/if}}
+		">{{{before}}}{{title}}{{{after}}}</a>
+		{{#if @partial-block}}
+			{{> @partial-block modifier=""}}
+		{{/if}}
+	</li>
+{{/set-context}}
